@@ -78,8 +78,7 @@ public class TesteController {
 	@GetMapping(value = "/restaurantes/com-frete-gratis")
 	public List<Restaurante> restauranteComFreteGratis (String nome){
 		 
-		return restauranteRepository.findAll(comFreteGratis()
-				.and(comNomeSemehante(nome)));
+		return restauranteRepository.findComFreteGratis(nome);
 	
 	}
 
